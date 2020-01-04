@@ -1,0 +1,45 @@
+<div class="container">
+    <h3>Fret</h3>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="model">Typical Models</label>
+                <select id="model" name="model" [(ngModel)]="calc.selectedModel" class="form-control" (change)="onChangeModel($event)">
+                    <option [ngValue]="model" *ngFor="let model of calc.models">{{ model.name }}</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="scale">Scale (mm)</label>
+                <input type="number" min="0" class="form-control" id="scale" [(ngModel)]="calc.scale" step="0.1" required (change)="valueChanged()">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="numFrets">Number of frets</label>
+                <input type="number" min="0" class="form-control" id="numFrets" [(ngModel)]="calc.numFrets" required (change)="valueChanged()">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>From Nut</th>
+                <th>From Fret</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let fret of frets">
+                <td>{{ fret.fret }}</td>
+                <td>{{ fret.positionFromNut | number }}</td>
+                <td>{{ fret.positionFromFret | number }}</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+</div>
