@@ -4,6 +4,7 @@ import { FretComponent } from './components/fret/fret.component';
 import { HomeComponent } from './components/home/home.component';
 import { SaddleComponent } from './components/saddle/saddle.component';
 import { FingerboardComponent } from './components/fingerboard/fingerboard.component';
+import { AboutComponent } from './components/about/about.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,9 @@ const routes: Routes = [
   },
   {
     path: 'fingerboard', component: FingerboardComponent
+  },
+  {
+    path: 'about', component: AboutComponent
   }
 ];
 

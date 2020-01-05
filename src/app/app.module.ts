@@ -9,6 +9,7 @@ import { SaddleComponent } from './components/saddle/saddle.component';
 import { FingerboardComponent } from './components/fingerboard/fingerboard.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavComponent } from './components/nav/nav.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NavComponent } from './components/nav/nav.component';
     SaddleComponent,
     FingerboardComponent,
     HomeComponent,
-    NavComponent
+    NavComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
