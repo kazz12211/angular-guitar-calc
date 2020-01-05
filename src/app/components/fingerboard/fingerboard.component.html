@@ -1,9 +1,9 @@
 <div class="container">
-    <h3>Fingerboard</h3>
+    <h3 class="py-4">指板寸法</h3>
     <div class="row">
         <div class="col-md-12">
             <div class="form-group">
-                <label for="model">Typical Model</label>
+                <label for="model">典型的なギターの弦長</label>
                 <select class="form-control" id="model" [(ngModel)]="calc.selectedModel"
                     (change)="onChangeModel($event)">
                     <option [ngValue]="model" *ngFor="let model of calc.models">{{ model.name }}</option>
@@ -15,14 +15,14 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                <label for="scale">Scale (mm)</label>
+                <label for="scale">弦長 (mm)</label>
                 <input type="number" min="0" class="form-control" id="scale" [(ngModel)]="calc.scale"
                     step="0.1" (change)="valueChanged()">
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
-                <label for="numberOfStrings">Number of Strings</label>
+                <label for="numberOfStrings">弦の数</label>
                 <input type="number" min="0" class="form-control" id="numberOfStrings" [(ngModel)]="calc.numberOfStrings"
                     step="1" (change)="valueChanged()">
             </div>
@@ -32,14 +32,14 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                <label for="numFrets">Number of Frets</label>
+                <label for="numFrets">フレット数</label>
                 <input type="number" class="form-control" id="numFrets" [(ngModel)]="calc.numFrets"
                     step="1" (change)="valueChanged()">
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
-                <label for="pitchAtNut">Pitch of Strings at Nut (mm)</label>
+                <label for="pitchAtNut">ナット位置での弦間隔 (mm)</label>
                 <input type="number" min="0" class="form-control" id="pitchAtNut" [(ngModel)]="calc.pitchAtNut"
                     step="0.1" (change)="valueChanged()">
             </div>
@@ -49,14 +49,14 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                <label for="pitchAtSaddle">Pitch of Strings at Saddle (mm)</label>
+                <label for="pitchAtSaddle">サドル位置での弦間隔 (mm)</label>
                 <input type="number" min="0" class="form-control" id="pitchAtSaddle" [(ngModel)]="calc.pitchAtSaddle"
                     step="0.1" (change)="valueChanged()">
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
-                <label for="sideSpacing">Side Spacing (mm)</label>
+                <label for="sideSpacing">１弦と指板側面の間隔 (mm)</label>
                 <input type="number" min="0" class="form-control" id="sideSpacing" [(ngModel)]="calc.sideSpacing"
                     step="0.1" (change)="valueChanged()">
             </div>
@@ -66,14 +66,14 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                <label for="fingerboardLength">Fingerboard Length (mm)</label>
+                <label for="fingerboardLength">指板長 (mm)</label>
                 <input type="text" readonly class="form-control" id="fingerboardLength"
                     value="{{ fingerboardLength | number }}">
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
-                <label for="fingerboardWidthNut">Fingerboard Width at Nut (mm)</label>
+                <label for="fingerboardWidthNut">ナット位置の指板幅 (mm)</label>
                 <input type="text" readonly class="form-control" id="fingerboardWidthNut"
                     value="{{ fingerboardWidthNut | number }}">
             </div>
@@ -83,7 +83,7 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                <label for="fingerboardWidthSaddle">Fingerboard Width at Heal (mm)</label>
+                <label for="fingerboardWidthSaddle">後端の指板幅 (mm)</label>
                 <input type="text" readonly class="form-control" id="fingerboardWidthSaddle"
                     value="{{ fingerboardWidthSaddle | number }}">
             </div>

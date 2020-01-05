@@ -1,9 +1,9 @@
 <div class="container">
-    <h3>Saddle</h3>
+    <h3 class="py-4">サドル位置と高さ</h3>
     <div class="row">
         <div class="col-md-12">
             <div class="form-group">
-                <label for="model">Typical Model</label>
+                <label for="model">典型的なギターの弦長</label>
                 <select class="form-control" id="model" [(ngModel)]="calc.selectedModel"
                     (change)="onChangeModel($event)">
                     <option [ngValue]="model" *ngFor="let model of calc.models">{{ model.name }}</option>
@@ -14,14 +14,14 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                <label for="scale">Scale (mm)</label>
+                <label for="scale">弦長 (mm)</label>
                 <input type="number" min="0" class="form-control" id="scale" [(ngModel)]="calc.scale" step="0.1"
                     (change)="valueChanged()">
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
-                <label for="jointPosition">Joint Position (mm)</label>
+                <label for="jointPosition">ネックとボディの接合位置 (ナットからのmm)</label>
                 <input type="number" min="0" class="form-control" id="jointPosition" [(ngModel)]="calc.jointPosition"
                     step="0.1" (change)="valueChanged()">
             </div>
@@ -30,14 +30,14 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                <label for="neckAngle">Neck Angle (deg.)</label>
+                <label for="neckAngle">ネック接合角度</label>
                 <input type="number" class="form-control" id="neckAngle" [(ngModel)]="calc.neckAngle" step="0.1"
                     (change)="valueChanged()">
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
-                <label for="stringHeight">String Height at 12th fret (mm)</label>
+                <label for="stringHeight">12フレットでの弦高 (mm)</label>
                 <input type="number" min="0" class="form-control" id="stringHeight" [(ngModel)]="calc.stringHeight"
                     step="0.1" (change)="valueChanged()">
             </div>
@@ -46,14 +46,14 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                <label for="fretHeight">Fret Height (mm)</label>
+                <label for="fretHeight">フレットの高さ (mm)</label>
                 <input type="number" min="0" class="form-control" id="fretHeight" [(ngModel)]="calc.fretHeight"
                     step="0.1" (change)="valueChanged()">
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
-                <label for="fingerboardThickness">Fingerboard Thickness (mm)</label>
+                <label for="fingerboardThickness">指板の厚み (mm)</label>
                 <input type="number" min="0" class="form-control" id="fingerboardThickness"
                     [(ngModel)]="calc.fingerboardThickness" step="0.1" (change)="valueChanged()">
             </div>
@@ -62,14 +62,14 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                <label for="saddlePosition">Saddle Position (mm)</label>
+                <label for="saddlePosition">サドル位置 (ボディ前端からのmm)</label>
                 <input type="text" readonly class="form-control" id="saddlePosition"
                     value="{{ saddlePosition | number }}">
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
-                <label for="saddleHeight">Saddle Height (mm)</label>
+                <label for="saddleHeight">サドルの高さ (mm)</label>
                 <input type="text" readonly class="form-control" id="saddleHeight" value="{{ saddleHeight | number }}">
             </div>
         </div>
