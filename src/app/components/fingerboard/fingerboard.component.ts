@@ -13,7 +13,7 @@ export class FingerboardComponent implements OnInit {
   fingerboardWidthNut: number;
   fingerboardWidthSaddle: number;
 
-  constructor(private calc: GuitarCalcService) { }
+  constructor(public calc: GuitarCalcService) { }
 
   ngOnInit() {
     this.calc.calcFingerboard().subscribe(result => {

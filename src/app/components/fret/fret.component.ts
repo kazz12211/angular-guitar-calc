@@ -9,7 +9,7 @@ import { GuitarCalcService } from 'src/app/services/guitar-calc.service';
 export class FretComponent implements OnInit {
 
   frets = [];
-  constructor(private calc: GuitarCalcService) { }
+  constructor(public calc: GuitarCalcService) { }
 
   ngOnInit() {
     this.calc.calcFret().subscribe(frets => this.frets = frets);

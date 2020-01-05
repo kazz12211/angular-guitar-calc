@@ -11,7 +11,7 @@ export class SaddleComponent implements OnInit {
   saddlePosition: number;
   saddleHeight: number;  
 
-  constructor(private calc: GuitarCalcService) { }
+  constructor(public calc: GuitarCalcService) { }
 
   ngOnInit() {
     this.calc.calcSaddle().subscribe(result => {
